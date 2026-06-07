@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Formula Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-icon">∑</div>
+      <div>
+        <h1>Math Formula Helper</h1>
+        <p class="subtitle">Symbols · Notes · LaTeX · Resources</p>
+      </div>
+    </header>
+
+    <!-- Math Symbol Library -->
+    <section class="card">
+      <h2 class="card-title">
+        <span class="card-icon">π</span>
+        Math Symbol Library
+      </h2>
+      <p class="card-desc">Click any symbol to copy it to your clipboard.</p>
+      <div class="symbol-grid" id="symbolGrid"></div>
+      <div class="toast" id="symbolToast" aria-live="polite">Copied</div>
+    </section>
+
+    <!-- Formula Notes -->
+    <section class="card">
+      <h2 class="card-title">
+        <span class="card-icon">fx</span>
+        Formula Notes
+      </h2>
+      <div class="formula-input-row">
+        <input
+          type="text"
+          id="formulaInput"
+          class="text-input"
+          placeholder="e.g. x^2 + y^2, sin(x), ln(x)"
+          maxlength="500"
+        />
+        <button type="button" id="saveFormulaBtn" class="btn btn-primary">Save</button>
+      </div>
+      <ul class="formula-list" id="formulaList"></ul>
+      <p class="empty-state" id="formulaEmpty">No saved formulas yet.</p>
+    </section>
+
+    <!-- Formula Converter -->
+    <section class="card">
+      <h2 class="card-title">
+        <span class="card-icon">⇄</span>
+        Formula Converter
+      </h2>
+      <p class="card-desc">Convert plain text formulas into LaTeX-friendly format.</p>
+      <label class="label" for="converterInput">Plain text input</label>
+      <input
+        type="text"
+        id="converterInput"
+        class="text-input"
+        placeholder="sin(x)^2 + cos(x)^2"
+      />
+      <label class="label" for="converterOutput">LaTeX output</label>
+      <div class="output-row">
+        <output id="converterOutput" class="output-box" for="converterInput"></output>
+        <button type="button" id="copyLatexBtn" class="btn btn-secondary" title="Copy LaTeX">Copy</button>
+      </div>
+      <div class="toast" id="latexToast" aria-live="polite">Copied</div>
+    </section>
+
+    <!-- Quick Formula Templates -->
+    <section class="card">
+      <h2 class="card-title">
+        <span class="card-icon">∂</span>
+        Derivative Rules
+      </h2>
+      <p class="card-desc">One-click insertion into Formula Notes.</p>
+      <div class="template-list" id="templateList"></div>
+    </section>
+
+    <!-- Educational Resources -->
+    <section class="card">
+      <h2 class="card-title">
+        <span class="card-icon">↗</span>
+        Useful Calculus Resources
+      </h2>
+      <ul class="resource-list">
+        <li>
+          <a href="https://www.calculadora-derivadas.org" target="_blank" rel="noopener noreferrer">
+            Derivative Calculator
+          </a>
+        </li>
+        <li>
+          <a href="https://www.calculadora-derivadas.org/calculadora-de-derivadas-parciales" target="_blank" rel="noopener noreferrer">
+            Partial Derivative Calculator
+          </a>
+        </li>
+        <li>
+          <a href="https://www.calculadora-derivadas.org/regla-de-la-cadena" target="_blank" rel="noopener noreferrer">
+            Chain Rule Calculator
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <span>Math Formula Helper v1.0</span>
+      <span>No tracking · No ads</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
