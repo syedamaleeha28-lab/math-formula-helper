@@ -3,6 +3,7 @@
   "name": "Math Formula Helper",
   "version": "1.0.0",
   "description": "Quickly copy math symbols, save formulas, convert to LaTeX, and access calculus resources.",
+  "homepage_url": "https://www.calculadora-derivadas.org",
   "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
